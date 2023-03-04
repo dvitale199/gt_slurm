@@ -3,6 +3,16 @@ git clone https://github.com/dvitale199/GenoTools.git
 cd GenoTools/
 pip3 install --user .
 cd ~/
+
+
+# also run these in the compute node
+# get plink
+wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20230116.zip
+unzip plink_linux_x86_64_20230116.zip
+sudo mv plink /bin/
+rm plink_linux_x86_64_20230116.zip prettify LICENSE toy.map toy.ped 
+
+# get plink2
 wget https://s3.amazonaws.com/plink2-assets/plink2_linux_avx2_20230109.zip
 unzip plink2_linux_avx2_20230109.zip
 sudo mv plink2 /bin/
