@@ -19,27 +19,34 @@ class GenCallJob:
         self.gcs_plink_path = gcs_plink_path
         self.log_path = log_path
         self.job_name = job_name
-        self.nodes = nodes
-        self.tasks_per_node = tasks_per_node
-        self.threads = threads
+        # self.nodes = nodes
+        # self.tasks_per_node = tasks_per_node
+        # self.threads = threads
         self.ntasks = ntasks
-        self.cpus_per_task = cpus_per_task
-        self.mem_per_cpu = mem_per_cpu
-        self.time = time
+        # self.cpus_per_task = cpus_per_task
+        # self.mem_per_cpu = mem_per_cpu
+        # self.time = time
 
     def write_header(self):
+
         header = f"""#!/bin/bash
 #SBATCH --job-name={self.job_name}
-#SBATCH --ntasks={self.ntasks}
-#SBATCH --cpus-per-task={self.cpus_per_task}
-#SBATCH --mem-per-cpu={self.mem_per_cpu}
-#SBATCH --nodes={self.nodes}
-#SBATCH --tasks-per-node={self.tasks_per_node}
-#SBATCH --time={self.time}
-
+#SBATCH --output={self.log_path}/{self.job_name}_%A_%a.out
+#SBATCH --error={self.log_path}/{self.job_name}_%A_%a.err
+#SBATCH --array=1-{self.ntasks}
 
 """
-        # header = f"""#!/bin/bash\n"""
+#         header = f"""#!/bin/bash
+# #SBATCH --job-name={self.job_name}
+# #SBATCH --ntasks={self.ntasks}
+# #SBATCH --cpus-per-task={self.cpus_per_task}
+# #SBATCH --mem-per-cpu={self.mem_per_cpu}
+# #SBATCH --nodes={self.nodes}
+# #SBATCH --tasks-per-node={self.tasks_per_node}
+# #SBATCH --time={self.time}
+
+
+# """
 
         return header
 
@@ -61,6 +68,12 @@ class GenCallJob:
 # """
 #         return script
 
+    def write_input_file(self):
+        with open('input_file.txt', 'w') as f:
+            for i in range(len(self.idat_dirs_in)):
+                code = self.idat_dirs_in[i].split('/')[-1]
+                gcs_idat_path = f'{self.gcs_idat_path}/{code}'
+                f.write(f"{self.idat_dirs_in[i]}\t{gcs_idat_path}\t{self.gcs_plink_paths[i]}\n")
 
     def write_sbatch_script(self):
         commands = []
@@ -69,8 +82,9 @@ class GenCallJob:
             code = idat_dir_in.split('/')[-1]
             gcs_idat_path = f'{self.gcs_idat_path}/{code}'
             # command = self.write_script(idat_dir_in, gcs_idat_path)
-            command = f'srun -n {self.ntasks} python3 /home/dan_datatecnica_com/scripts/call_gts.py --input {idat_dir_in} --gcs_in {gcs_idat_path} --gcs_out {self.gcs_plink_path} &'
+            command = f'python3 /home/dan_datatecnica_com/scripts/call_gts.py --input {idat_dir_in} --gcs_in {gcs_idat_path} --gcs_out {self.gcs_plink_path} &'
             commands.append(command)
+
 #             commands.append(
 #                 f'\
 # srun \
