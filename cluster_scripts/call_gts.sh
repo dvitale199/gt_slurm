@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=callgts
-#SBATCH --output=~/logs/callgts.%A_%a.out
-#SBATCH --error=~/logs/callgts.%A_%a.err
+#SBATCH --job-name=$3
+#SBATCH --output=~/logs/$3.%A_%a.out
+#SBATCH --error=~/logs/$3.%A_%a.err
 #SBATCH --ntasks=$1
 #SBATCH --nodes=$1
-#SBATCH --time=00:10:00
+#SBATCH --time=01:00:00
 #SBATCH --array=1-$1
 
 args_file = "$2"

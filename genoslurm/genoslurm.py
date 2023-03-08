@@ -69,7 +69,7 @@ class GenCallJob:
 #         return script
 
     def write_input_file(self):
-        with open('input_file.txt', 'w') as f:
+        with open(self.input_file, 'w') as f:
             for i in range(len(self.idat_dirs_in)):
                 code = self.idat_dirs_in[i].split('/')[-1]
                 gcs_idat_path = f'{self.gcs_idat_path}/{code}'
