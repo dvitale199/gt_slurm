@@ -1,0 +1,13 @@
+gs://gp2_uk/gp2_idats/
+gs://gp2_uk/gp2_idats/204620380001/
+gs://gp2_uk/gp2_idats/206412050154/
+gs://gp2_uk/gp2_idats/206412050160/
+gs://gp2_uk/gp2_idats/206412050162/
+gs://gp2_uk/gp2_idats/206412050175/
+gs://gp2_uk/gp2_idats/206451070064/
+gs://gp2_uk/gp2_idats/206451070070/
+gs://gp2_uk/gp2_idats/206451070071/
+gs://gp2_uk/gp2_idats/206451070072/
+gs://gp2_uk/gp2_idats/206451070101/
+gs://gp2_uk/gp2_idats/206451070115/
+gs://gp2_uk/gp2_idats/206451070117/
