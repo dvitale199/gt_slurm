@@ -24,9 +24,10 @@ for ped_file in os.listdir(args.input):
     if ped_file.endswith(".ped"):
         ped_file_path = os.path.join(args.input, ped_file)
         out_file_path = os.path.join(args.input, os.path.splitext(ped_file)[0])
+        ped_in = ped_file_path.split('.')[0]
         cp_cmd = f"cp {args.input}/NeuroBooster_20042459_A2.map {out_file_path}.map"
         os.system(cp_cmd)
-        plink_cmd = f"plink --ped {ped_file_path} --make-bed --out {out_file_path}"
+        plink_cmd = f"/home/dan_datatecnica_com/bin/plink --file {ped_in} --make-bed --out {out_file_path}"
         os.system(plink_cmd)
 
 # Copy output files back to Google Cloud Storage

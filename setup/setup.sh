@@ -9,13 +9,13 @@ cd ~/
 # get plink
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20230116.zip
 unzip plink_linux_x86_64_20230116.zip
-sudo mv plink /bin/
+mv plink /home/dan_datatecnica_com/bin/
 rm plink_linux_x86_64_20230116.zip prettify LICENSE toy.map toy.ped 
 
 # get plink2
 wget https://s3.amazonaws.com/plink2-assets/plink2_linux_avx2_20230109.zip
 unzip plink2_linux_avx2_20230109.zip
-sudo mv plink2 /bin/
+mv plink2 /home/dan_datatecnica_com/bin/
 rm plink2_linux_avx2_20230109.zip
 
 mkdir scripts
