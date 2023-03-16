@@ -10,7 +10,6 @@ args = parser.parse_args()
 
 # Create directories
 os.makedirs(args.input, exist_ok=True)
-# os.makedirs(args.output, exist_ok=True)
 
 # Copy files from Google Cloud Storage to local directory
 os.system(f"gsutil cp gs://{args.gcs_in}/* {args.input}/")
