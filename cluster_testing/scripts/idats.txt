@@ -1,0 +1,2 @@
+gs://gp2_data/gp2_idats/
+gs://gp2_data/gp2_idats/204620380001/
