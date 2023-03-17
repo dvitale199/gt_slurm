@@ -10,7 +10,7 @@ gcs_plink_path=$(echo "$line" | awk '{print $3}')
 echo "Starting job"
 date
 
-python3 /home/dan_datatecnica_com/scripts/call_gts.py --input ${idat_dir_in} --gcs_in ${gcs_idat_path} --gcs_out ${gcs_plink_path}
+python3 ~/scripts/call_gts.py --input ${idat_dir_in} --gcs_in ${gcs_idat_path} --gcs_out ${gcs_plink_path}
 
 echo "Job finished"
 date
