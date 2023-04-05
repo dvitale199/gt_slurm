@@ -31,7 +31,7 @@ for ped_file in os.listdir(args.input):
         os.system(plink_cmd)
 
 # Copy output files back to Google Cloud Storage
-os.system(f"gsutil cp {args.input}/*.{{bed,bim,fam,log}} gs://{args.gcs_out}/")
+os.system(f"gsutil -m cp {args.input}/*.{{bed,bim,fam,log}} gs://{args.gcs_out}/")
 
 # now remove input directory in vm
 os.system(f"rm -rf {args.input}")
