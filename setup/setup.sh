@@ -54,3 +54,15 @@ pip3 install --user umap
 # gcsfuse --dir-mode 777 --file-mode 777 --implicit-dirs gp2_uk ~/gcs/gp2_data
 
 
+# setup for imputation
+mkdir /impute/ref
+mkdir /impute/test_data
+mkdir /impute/tmp
+mkdir /impute/tools
+
+# install bgzip, vcftools, vcf-sort, tabix on centos
+# sudo yum install -y zlib-devel bzip2-devel xz-devel
+sudo yum install -y htslib-tools
+sudo yum install -y vcftools
+
+
