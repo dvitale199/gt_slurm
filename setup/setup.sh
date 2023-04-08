@@ -28,9 +28,9 @@ mkdir /tmp/data
 sudo chmod -r 777 /tmp/data 
 
 # need to work out these versions later for VM
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade Pillow
-python3 -m pip install --upgrade matplotlib
+python3 -m pip install --upgrade --user pip
+python3 -m pip install --upgrade --user Pillow
+python3 -m pip install --upgrade --user matplotlib
 pip3 install --user h5py
 pip3 install --user joblib
 pip3 install --user numpy

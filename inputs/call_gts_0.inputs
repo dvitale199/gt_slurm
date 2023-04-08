@@ -1,10 +1,10 @@
-/tmp/data/204620380001	gp2_uk/gp2_idats/204620380001	gp2_uk/gp2_plink/
-/tmp/data/205746280003	gp2_uk/gp2_idats/205746280003	gp2_uk/gp2_plink/
-/tmp/data/205746280013	gp2_uk/gp2_idats/205746280013	gp2_uk/gp2_plink/
-/tmp/data/205746280014	gp2_uk/gp2_idats/205746280014	gp2_uk/gp2_plink/
-/tmp/data/205746280028	gp2_uk/gp2_idats/205746280028	gp2_uk/gp2_plink/
-/tmp/data/205746280029	gp2_uk/gp2_idats/205746280029	gp2_uk/gp2_plink/
-/tmp/data/205746280031	gp2_uk/gp2_idats/205746280031	gp2_uk/gp2_plink/
-/tmp/data/205746280032	gp2_uk/gp2_idats/205746280032	gp2_uk/gp2_plink/
-/tmp/data/205746280033	gp2_uk/gp2_idats/205746280033	gp2_uk/gp2_plink/
-/tmp/data/205746280034	gp2_uk/gp2_idats/205746280034	gp2_uk/gp2_plink/
+--input /tmp/data/204620380001	--gcs_in gp2_uk/gp2_idats/204620380001	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280003	--gcs_in gp2_uk/gp2_idats/205746280003	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280013	--gcs_in gp2_uk/gp2_idats/205746280013	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280014	--gcs_in gp2_uk/gp2_idats/205746280014	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280028	--gcs_in gp2_uk/gp2_idats/205746280028	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280029	--gcs_in gp2_uk/gp2_idats/205746280029	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280031	--gcs_in gp2_uk/gp2_idats/205746280031	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280032	--gcs_in gp2_uk/gp2_idats/205746280032	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280033	--gcs_in gp2_uk/gp2_idats/205746280033	--gcs_out gp2_uk/test/
+--input /tmp/data/205746280034	--gcs_in gp2_uk/gp2_idats/205746280034	--gcs_out gp2_uk/test/
